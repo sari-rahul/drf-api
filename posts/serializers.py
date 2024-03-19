@@ -1,4 +1,5 @@
-from django_framework import serializers
+from rest_framework import serializers
+
 from .models import Post
 
 class PostSerializer(serializers.ModelSerializer):
@@ -10,7 +11,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     def validate_image(self,value):
         if value.size > 1024 * 1024 * 2:
-            raise serializers.ValidatioError(
+            raise serializers.ValidationError(
                 'Image size larger than 2MB!'
             )
         if value.image.width > 4096:
