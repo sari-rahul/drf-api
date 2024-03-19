@@ -18,7 +18,11 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
-    image = models.ImageField(upload_to='image/', default='../profile-cloudinary_sjxmle',blank=True) 
+    image = models.ImageField(
+        upload_to='image/', 
+        default='../default_profile_sjxmle',
+        blank=True
+        ) 
     image_fiter = models.CharField(
         max_length=32,
         choices = image_filter_choices,

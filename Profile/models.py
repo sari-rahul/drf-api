@@ -11,7 +11,7 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=255,blank=True)
     content = models.TextField(blank=True)
-    image = models.ImageField(upload_to='images/',default='../profile-cloudinary_sjxmle')
+    image = models.ImageField(upload_to='images/', default='../default_post_elqjw1')
 
 
     class Meta:
