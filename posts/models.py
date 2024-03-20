@@ -23,7 +23,7 @@ class Post(models.Model):
         default='../default_profile_sjxmle',
         blank=True
         ) 
-    image_filter = models.CharField(
+    image_fiter = models.CharField(
         max_length=32,
         choices = image_filter_choices,
         default = 'normal')

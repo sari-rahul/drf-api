@@ -22,5 +22,7 @@ urlpatterns = [
     path('api-auth7',include('rest_framework.urls')),
     path('', include('Profile.urls')),
     path('', include('posts.urls')),
+    path('', include('comments.urls')),
+
 
 ]
