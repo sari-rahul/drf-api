@@ -15,7 +15,7 @@ def root_route(request):
 def logout_route(request):
     response = Response()
     response.set_cookie(
-        key=JWT_AUTH_COKKIE,
+        key=JWT_AUTH_COOKIE,
         value='',
         httponly=True,
         expires='Thu, 01 Jan 1970 00:00:00 GMT',
@@ -24,7 +24,7 @@ def logout_route(request):
         secure=JWT_AUTH_SECURE,
     )
     response.set_cookie(
-        key=JWT_AUTH_REFRESH_COKKIE,
+        key=JWT_AUTH_REFRESH_COOKIE,
         value='',
         httponly=True,
         expires='Thu, 01 Jan 1970 00:00:00 GMT',
