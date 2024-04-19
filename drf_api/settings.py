@@ -113,6 +113,9 @@ if 'CLIENT_ORIGIN' in os.environ:
         rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
         ]
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    'https://moments-social-media-075814c2a91f.herokuapp.com',
+]
 
 ROOT_URLCONF = 'drf_api.urls'
 
